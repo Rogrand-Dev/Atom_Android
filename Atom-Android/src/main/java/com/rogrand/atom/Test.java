@@ -5,4 +5,5 @@ package com.rogrand.atom;
  */
 
 public class Test {
+    //
 }
