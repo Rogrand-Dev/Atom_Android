@@ -1,4 +1,4 @@
-package com.rogrand.atom.atom;
+package com.rogrand.demo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
