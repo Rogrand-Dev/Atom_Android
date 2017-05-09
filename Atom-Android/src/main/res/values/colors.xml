@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00ABFF</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#53BAED</color>
+    <color name="tab_unselect">#929292</color>
+    <color name="windowBackground">#F4F5F6</color>
+    <!--单纯的颜色-->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <!--标题颜色-->
+    <color name="colorTitle">#FF222222</color>
+    <!--内容颜色-->
+    <color name="colorContent">#666666</color>
+
+</resources>

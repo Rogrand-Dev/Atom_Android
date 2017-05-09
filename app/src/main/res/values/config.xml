@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 是否为debug模式 -->
+    <bool name="is_debug">true</bool>
+    <!-- 接口url -->
+    <!-- 测试环境：http://oatest.rogrand.com:9527/ -->
+    <!-- 正式环境： -->
+    <string name="api_host">http://oatest.rogrand.com:9527/</string>
+    <!-- 接口前缀 -->
+    <string name="api_name_prefix"></string> <!--api/-->
+    <!-- 接口版本 -->
+    <string name="api_version">1</string>
+    <!-- Token Client id -->
+    <string name="token_client_id">hGjdbUa2BavkHshRwSfL</string>
+    <!-- Token Client Secret -->
+    <string name="token_client_secret">YrNIiiu3vc05ERRJxHK8</string>
+    <!-- 每页几条数据 -->
+    <integer name="url_pagesize">10</integer>
+
+</resources>
