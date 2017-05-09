@@ -11,11 +11,33 @@ interface LoginContract {
 
         void loginSuccess(int authState);
 
+        void showOtherLogins();
+
+        void hideOtherLogins();
+
+        void openOtherLoginsDrawer();
+
+        void closeOtherLoginsDrawer();
+
+        Context getContext();
     }
 
     interface Presenter extends BasePresenter<View> {
 
+        void onRegisterClick();
+
         void login(Context context, String userName, String passWord);
 
+        void onPageChange(int pos);
+
+        void onDrawerSwitchClick(boolean isDrawerOpen);
+
+        void onSinaLoginClick();
+
+        void onWechatLoginClick();
+
+        void onQQLoginClick();
+
+        void onBaiduLoginCLick();
     }
 }
