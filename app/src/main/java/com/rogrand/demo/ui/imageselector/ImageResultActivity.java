@@ -1,6 +1,7 @@
 package com.rogrand.demo.ui.imageselector;
 
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -83,11 +84,11 @@ public class ImageResultActivity extends SimpleActivity {
                             .setCropW(100) // cropW-->裁剪宽度 值不能小于100  如果值大于图片原始宽高 将返回原图大小
                             .setCropH(100) // cropH-->裁剪高度 值不能小于100 如果值大于图片原始宽高 将返回原图大小
                             .setMaxB(400) // 压缩最大值 例如:200kb  就设置202400，202400 / 1024 = 200kb
-                            .setPreviewColor(Color.parseColor("#ff00abff"))//设置"预览"字体颜色
-                            .setCompleteColor(Color.parseColor("#ff00abff"))//设置"已完成"字体颜色
+                            .setPreviewColor(Color.WHITE)//设置"预览"字体颜色
+                            .setCompleteColor(Color.WHITE)//设置"已完成"字体颜色
                             .setPreviewBottomBgColor(Color.BLACK)//设置预览图片底部背景颜色
-                            .setPreviewTopBgColor(Color.GREEN)//设置预览界面标题栏背景色
-                            .setBottomBgColor(Color.RED)//设置图片列表底部背景色
+                            .setPreviewTopBgColor(ContextCompat.getColor(mContext,R.color.colorPrimary))//设置预览界面标题栏背景色
+                            .setBottomBgColor(ContextCompat.getColor(mContext,R.color.colorPrimary))//设置图片列表底部背景色
                             .setGrade(Luban.THIRD_GEAR)//设置压缩等级
                             .setCheckNumMode(false)//?
 //                            .setCustomQQ_theme(0)//可自定义QQ数字风格，不传就默认是蓝色风格
@@ -98,7 +99,7 @@ public class ImageResultActivity extends SimpleActivity {
                             .setCompressFlag(2)// 1 系统自带压缩 2 luban压缩
                             .setCompressW(100) // 压缩宽 如果值大于图片原始宽高无效
                             .setCompressH(100) // 压缩高 如果值大于图片原始宽高无效
-//                            .setThemeStyle(0) // 设置主题样式
+                            .setThemeStyle(ContextCompat.getColor(mContext,R.color.colorPrimary)) // 设置主题样式
                             .setNumComplete(true) // 0/9 完成  样式
                             .setClickVideo(false)// 点击声音
 //                            .setPicture_title_color(ContextCompat.getColor(MainActivity.this, R.color.black)) // 设置标题字体颜色

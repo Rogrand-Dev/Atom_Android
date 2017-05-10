@@ -27,6 +27,7 @@
         <activity android:name=".ui.home.register.RegisterActivity" />
         <!--图片选择后的显示界面-->
         <activity android:name=".ui.imageselector.ImageResultActivity" />
+        <!--解决Android6.0+拍照问题-->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
