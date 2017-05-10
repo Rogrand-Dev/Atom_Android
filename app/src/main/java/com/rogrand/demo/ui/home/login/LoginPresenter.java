@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.widget.Toast;
 
 import com.rogrand.demo.base.RxPresenter;
+import com.rogrand.demo.ui.home.register.RegisterActivity;
 
 import javax.inject.Inject;
 
@@ -19,7 +20,8 @@ class LoginPresenter extends RxPresenter<LoginContract.View> implements LoginCon
 
     @Override
     public void onRegisterClick() {
-        Toast.makeText(mView.getContext(), "小伙,注册一发", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(mView.getContext(), RegisterActivity.class);
+        mView.getContext().startActivity(intent);
     }
 
     @Override

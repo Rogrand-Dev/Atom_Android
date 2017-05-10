@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextWatcher;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +40,7 @@ public class CatEyeMobileLoginFragment extends Fragment {
     ImageView mIvVCodeClear;
     Button mBtnSubmit;
     TextView mTvQuestions;
+    TextView mTvUserAgreement;
 
     @Nullable
     @Override
@@ -154,6 +159,15 @@ public class CatEyeMobileLoginFragment extends Fragment {
                 Toast.makeText(v.getContext(), "老铁,没毛病!", Toast.LENGTH_SHORT).show();
             }
         });
+        SpannableString spannableString = new SpannableString(mTvUserAgreement.getText());
+        spannableString.setSpan(new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                Toast.makeText(getContext(), "用户协议", Toast.LENGTH_SHORT).show();
+            }
+        }, mTvUserAgreement.getText().toString().indexOf("《"), mTvUserAgreement.length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        mTvUserAgreement.setText(spannableString);
+        mTvUserAgreement.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     private void initView(View view) {
@@ -164,5 +178,6 @@ public class CatEyeMobileLoginFragment extends Fragment {
         mIvVCodeClear = (ImageView) view.findViewById(R.id.iv_cat_eye_mobile_login_vcode_clear);
         mBtnSubmit = (Button) view.findViewById(R.id.btn_cat_eye_mobile_login_submit);
         mTvQuestions = (TextView) view.findViewById(R.id.tv_cat_eye_mobile_login_questions);
+        mTvUserAgreement = (TextView) view.findViewById(R.id.tv_cat_eye_mobile_login_user_agreement);
     }
 }

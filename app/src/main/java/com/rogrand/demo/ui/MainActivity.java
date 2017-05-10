@@ -1,5 +1,6 @@
 package com.rogrand.demo.ui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -57,6 +58,11 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     public void showError(String msg) {
+    }
+
+    @Override
+    public Context getContext() {
+        return this;
     }
 
 

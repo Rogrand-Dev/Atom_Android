@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:text="注册"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_register_input_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1输入手机号"
+            android:textColor="#f34d41" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="#e4e4e3" />
+
+        <TextView
+            android:id="@+id/tv_register_input_verify_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2输入验证码"
+            android:textColor="#686868" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="#e4e4e3" />
+
+        <TextView
+            android:id="@+id/tv_register_input_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3设置密码"
+            android:textColor="#686868" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/vg_register_input_phone_number"
+        layout="@layout/include_register_input_phone_number" />
+
+    <include
+        android:id="@+id/vg_register_input_verify_code"
+        layout="@layout/include_register_input_verify_code"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/vg_register_input_password"
+        layout="@layout/include_register_input_password"
+        android:visibility="gone" />
+</LinearLayout>

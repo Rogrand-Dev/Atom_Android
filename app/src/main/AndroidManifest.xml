@@ -20,6 +20,8 @@
         </activity>
         <!-- 登录 -->
         <activity android:name=".ui.home.login.LoginActivity" />
+        <!--注册-->
+        <activity android:name=".ui.home.register.RegisterActivity" />
     </application>
 
 </manifest>

@@ -18,8 +18,6 @@ interface LoginContract {
         void openOtherLoginsDrawer();
 
         void closeOtherLoginsDrawer();
-
-        Context getContext();
     }
 
     interface Presenter extends BasePresenter<View> {
