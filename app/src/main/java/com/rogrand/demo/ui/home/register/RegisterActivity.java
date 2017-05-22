@@ -1,6 +1,5 @@
 package com.rogrand.demo.ui.home.register;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.text.Editable;
@@ -66,16 +65,6 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
 
     @BindView(R.id.btn_register_submit_password)
     Button mBtnSubmitPassword;
-
-    @Override
-    public void showError(String msg) {
-
-    }
-
-    @Override
-    public Context getContext() {
-        return this;
-    }
 
     @Override
     protected void initInject() {

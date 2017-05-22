@@ -5,6 +5,8 @@ package com.rogrand.demo.app;
  */
 public class Constants {
 
-    public static final String MD5_SECRET = "rogrand_community"; // MD5 加密秘钥
+    public static final String MD5_SECRET = "90cf3c79d07be611e9e50ff77436a9dc5e9df035"; // 加密秘钥
+    public static final String ACCESS_TOKEN = "access_token"; // token
+    public static final String REFRESH_TOKEN = "refresh_token"; // refresh_token
 
 }

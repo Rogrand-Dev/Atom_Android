@@ -4,29 +4,49 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.widget.Toast;
 
 import com.rogrand.demo.base.RxPresenter;
+import com.rogrand.demo.bean.LoginBean;
+import com.rogrand.demo.component.DataManager;
+import com.rogrand.demo.http.RxSubUtils;
+import com.rogrand.demo.http.api.ApiResponse;
 import com.rogrand.demo.ui.home.register.RegisterActivity;
+import com.rogrand.demo.utils.RxUtils;
 
 import javax.inject.Inject;
 
 class LoginPresenter extends RxPresenter<LoginContract.View> implements LoginContract.Presenter {
 
-    @Inject
-    public LoginPresenter() {
+    private DataManager mDataManager;
 
+    @Inject
+    public LoginPresenter(DataManager dataManager) {
+        this.mDataManager = dataManager;
     }
 
     @Override
-    public void onRegisterClick() {
-        Intent intent = new Intent(mView.getContext(), RegisterActivity.class);
-        mView.getContext().startActivity(intent);
+    public void onRegisterClick(Context context) {
+        Intent intent = new Intent(context, RegisterActivity.class);
+        context.startActivity(intent);
     }
 
     @Override
     public void login(final Context context, String userName, String passWord) {
+        addSubscribe(mDataManager.login(userName, passWord)
+                .compose(RxUtils.<ApiResponse<LoginBean>>rxSchedulerHelper())
+                .compose(RxUtils.<LoginBean>handleResult())
+                .subscribeWith(new RxSubUtils<LoginBean>(context, "正在登录...") {
 
+                    @Override
+                    public void _onNext(LoginBean mLoginBean) {
+
+                    }
+
+                    @Override
+                    public void _onError(int errorCode, String message) {
+                        mView.showErrorMsg(message);
+                    }
+                }));
     }
 
     @Override
@@ -48,32 +68,32 @@ class LoginPresenter extends RxPresenter<LoginContract.View> implements LoginCon
     }
 
     @Override
-    public void onSinaLoginClick() {
+    public void onSinaLoginClick(Context context) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("http://www.sina.com"));
 //        intent.putExtra(SearchManager.QUERY, "Sina");
-        mView.getContext().startActivity(intent);
+        context.startActivity(intent);
     }
 
     @Override
-    public void onWechatLoginClick() {
+    public void onWechatLoginClick(Context context) {
         Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
         intent.putExtra(SearchManager.QUERY, "Wechat");
-        mView.getContext().startActivity(intent);
+        context.startActivity(intent);
     }
 
     @Override
-    public void onQQLoginClick() {
+    public void onQQLoginClick(Context context) {
         Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
         intent.putExtra(SearchManager.QUERY, "QQ");
-        mView.getContext().startActivity(intent);
+        context.startActivity(intent);
     }
 
     @Override
-    public void onBaiduLoginCLick() {
+    public void onBaiduLoginCLick(Context context) {
         Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
         intent.putExtra(SearchManager.QUERY, "Baidu");
-        mView.getContext().startActivity(intent);
+        context.startActivity(intent);
     }
 
 }

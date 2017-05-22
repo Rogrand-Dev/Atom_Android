@@ -22,7 +22,7 @@ interface LoginContract {
 
     interface Presenter extends BasePresenter<View> {
 
-        void onRegisterClick();
+        void onRegisterClick(Context context);
 
         void login(Context context, String userName, String passWord);
 
@@ -30,12 +30,12 @@ interface LoginContract {
 
         void onDrawerSwitchClick(boolean isDrawerOpen);
 
-        void onSinaLoginClick();
+        void onSinaLoginClick(Context context);
 
-        void onWechatLoginClick();
+        void onWechatLoginClick(Context context);
 
-        void onQQLoginClick();
+        void onQQLoginClick(Context context);
 
-        void onBaiduLoginCLick();
+        void onBaiduLoginCLick(Context context);
     }
 }

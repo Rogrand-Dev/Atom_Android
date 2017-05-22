@@ -16,19 +16,19 @@ public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
     @Override
     public void detachView() {
         this.mView = null;
-//        unSubscribe();
+        unSubscribe();
     }
 
-    protected void addSubscribe(Disposable disposable) {
+    protected void addSubscribe(Disposable subscription) {
         if (mCompositeDisposable == null) {
             mCompositeDisposable = new CompositeDisposable();
         }
-        mCompositeDisposable.add(disposable); // 将所有Disposable放入，集中处理
+        mCompositeDisposable.add(subscription);
     }
 
     protected void unSubscribe() {
         if (mCompositeDisposable != null) {
-            mCompositeDisposable.clear(); // Activity结束时，取消所有正在执行的订阅
+            mCompositeDisposable.clear();
         }
     }
 }

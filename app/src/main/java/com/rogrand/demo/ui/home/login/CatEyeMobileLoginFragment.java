@@ -21,10 +21,6 @@ import android.widget.Toast;
 
 import com.rogrand.atom.widget.CountDownButton;
 import com.rogrand.demo.R;
-import com.rogrand.demo.bean.LoginBean;
-import com.rogrand.demo.http.HttpManager;
-import com.rogrand.demo.http.callback.OnResultCallBack;
-import com.rogrand.demo.http.subscriber.HttpSubscriber;
 
 
 /**
@@ -32,7 +28,6 @@ import com.rogrand.demo.http.subscriber.HttpSubscriber;
  */
 
 public class CatEyeMobileLoginFragment extends Fragment {
-    private HttpSubscriber mHttpObserver;
     EditText mEtAccount;
     ImageView mIvAccountClear;
     CountDownButton mBtnGetVCode;
@@ -133,23 +128,11 @@ public class CatEyeMobileLoginFragment extends Fragment {
                 mEtVCode.setText("");
             }
         });
-        mHttpObserver = new HttpSubscriber(new OnResultCallBack<LoginBean>() {
-            @Override
-            public void onSuccess(LoginBean bean) {
-                Toast.makeText(getContext(), "登录成功", Toast.LENGTH_SHORT).show();
-                getActivity().finish();
-            }
-
-            @Override
-            public void onError(int code, String errorMsg) {
-
-            }
-        });
 
         mBtnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HttpManager.getInstance().loginNoCache(mHttpObserver, mEtAccount.getText().toString(), mEtVCode.getText().toString());
+//                HttpManager.getInstance().loginNoCache(mHttpObserver, mEtAccount.getText().toString(), mEtVCode.getText().toString());
             }
         });
 

@@ -65,8 +65,8 @@ public class MainFragment extends SupportFragment {
 
         mBottomBar
                 .addItem(new BottomBarTab(_mActivity, R.drawable.ic_bottombar_home, "界面"))
-                .addItem(new BottomBarTab(_mActivity, R.drawable.ic_bottombar_my, "工具"))
-                .addItem(new BottomBarTab(_mActivity, R.drawable.ic_bottombar_service, "其他"));
+                .addItem(new BottomBarTab(_mActivity, R.drawable.ic_bottombar_service, "工具"))
+                .addItem(new BottomBarTab(_mActivity, R.drawable.ic_bottombar_my, "我的"));
 
         // 模拟未读消息
 //        mBottomBar.getItem(FIRST).setUnreadCount(9);

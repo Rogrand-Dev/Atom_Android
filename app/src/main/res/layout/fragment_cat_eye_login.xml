@@ -33,11 +33,11 @@
             android:textSize="14sp" />
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/iv_cat_eye_login_account_clear"
             android:layout_width="10dp"
             android:layout_height="match_parent"
-            android:background="@color/colorAccent" />
+            android:background="@color/colorAccent"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <View
@@ -75,13 +75,13 @@
             android:textSize="14sp" />
 
         <ImageView
-            android:visibility="invisible"
             android:id="@+id/iv_cat_eye_login_password_clear"
             android:layout_width="10dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@color/colorAccent" />
+            android:background="@color/colorAccent"
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/iv_cat_eye_login_password_watch"

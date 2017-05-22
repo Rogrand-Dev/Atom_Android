@@ -2,7 +2,6 @@ package com.rogrand.demo.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -45,17 +44,10 @@ public class HomeTabFragment extends SimpleFragment {
     }
 
     @Override
-    protected void initView() {
+    protected void initEventAndData() {
         EventBus.getDefault().register(this);
         mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 2, GridLayoutManager.VERTICAL, false));
-    }
 
-    /**
-     * 同级 Fragment 切换的懒加载
-     */
-    @Override
-    public void onLazyInitView(@Nullable Bundle savedInstanceState) {
-        super.onLazyInitView(savedInstanceState);
         initData();
         initAdapter();
     }

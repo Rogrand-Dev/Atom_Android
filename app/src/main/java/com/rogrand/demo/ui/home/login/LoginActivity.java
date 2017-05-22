@@ -1,7 +1,6 @@
 package com.rogrand.demo.ui.home.login;
 
 import android.animation.ObjectAnimator;
-import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -9,14 +8,9 @@ import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.rogrand.demo.R;
 import com.rogrand.demo.base.BaseActivity;
-import com.rogrand.demo.bean.LoginBean;
-import com.rogrand.demo.http.HttpManager;
-import com.rogrand.demo.http.callback.OnResultCallBack;
-import com.rogrand.demo.http.subscriber.HttpSubscriber;
 
 import butterknife.BindView;
 
@@ -47,8 +41,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     protected void initInject() {
-        mPresenter = new LoginPresenter();
-//        getActivityComponent().inject(this);
+        getActivityComponent().inject(this);
     }
 
     @Override
@@ -65,7 +58,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
         mTvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPresenter.onRegisterClick();
+                mPresenter.onRegisterClick(mContext);
             }
         });
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -93,27 +86,29 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
         mVgSina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPresenter.onSinaLoginClick();
+                mPresenter.onSinaLoginClick(mContext);
             }
         });
         mVgWechat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPresenter.onWechatLoginClick();
+                mPresenter.onWechatLoginClick(mContext);
             }
         });
         mVgQQ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPresenter.onQQLoginClick();
+                mPresenter.onQQLoginClick(mContext);
             }
         });
         mVgBaidu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPresenter.onBaiduLoginCLick();
+                mPresenter.onBaiduLoginCLick(mContext);
             }
         });
+
+        mPresenter.login(mContext, "一带一路abc", "123456");
 
     }
 
@@ -162,19 +157,9 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     }
 
     @Override
-    public Context getContext() {
-        return this;
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
 
-    }
-
-    @Override
-    public void showError(String msg) {
-        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
     }
 
 }

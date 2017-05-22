@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportFragment;
 
 /**
@@ -20,6 +21,7 @@ public abstract class SimpleFragment extends SupportFragment {
     protected View mView;
     protected Activity mActivity;
     protected Context mContext;
+    private Unbinder mUnBinder;
 
     @Override
     public void onAttach(Context context) {
@@ -38,17 +40,22 @@ public abstract class SimpleFragment extends SupportFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mUnBinder = ButterKnife.bind(this, view);
+    }
 
-        ButterKnife.bind(this, view);
-        initView();
+    @Override
+    public void onLazyInitView(@Nullable Bundle savedInstanceState) {
+        super.onLazyInitView(savedInstanceState);
+        initEventAndData();
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        mUnBinder.unbind();
     }
 
     protected abstract int getLayoutId();
 
-    protected abstract void initView();
+    protected abstract void initEventAndData();
 }

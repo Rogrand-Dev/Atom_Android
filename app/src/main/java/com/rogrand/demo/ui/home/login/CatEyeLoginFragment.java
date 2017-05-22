@@ -16,10 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rogrand.demo.R;
-import com.rogrand.demo.bean.LoginBean;
-import com.rogrand.demo.http.HttpManager;
-import com.rogrand.demo.http.callback.OnResultCallBack;
-import com.rogrand.demo.http.subscriber.HttpSubscriber;
 
 
 /**
@@ -27,7 +23,6 @@ import com.rogrand.demo.http.subscriber.HttpSubscriber;
  */
 
 public class CatEyeLoginFragment extends Fragment {
-    private HttpSubscriber mHttpObserver;
 
     EditText mEtAccount;
     ImageView mIvAccountClear;
@@ -141,23 +136,10 @@ public class CatEyeLoginFragment extends Fragment {
             }
         });
 
-        mHttpObserver = new HttpSubscriber(new OnResultCallBack<LoginBean>() {
-            @Override
-            public void onSuccess(LoginBean bean) {
-                Toast.makeText(getContext(), "登录成功", Toast.LENGTH_SHORT).show();
-                getActivity().finish();
-            }
-
-            @Override
-            public void onError(int code, String errorMsg) {
-
-            }
-        });
-
         mBtnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HttpManager.getInstance().loginNoCache(mHttpObserver, mEtAccount.getText().toString(), mEtPassword.getText().toString());
+//                HttpManager.getInstance().loginNoCache(mHttpObserver, mEtAccount.getText().toString(), mEtPassword.getText().toString());
             }
         });
 
@@ -167,11 +149,5 @@ public class CatEyeLoginFragment extends Fragment {
                 Toast.makeText(v.getContext(), "你遇到什么问题?不妨说来听听.", Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mHttpObserver.unSubscribe();
     }
 }

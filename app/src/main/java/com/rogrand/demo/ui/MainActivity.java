@@ -1,6 +1,5 @@
 package com.rogrand.demo.ui;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -57,16 +56,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     }
 
     @Override
-    public void showError(String msg) {
-    }
-
-    @Override
-    public Context getContext() {
-        return this;
-    }
-
-
-    @Override
     public void onBackPressedSupport() {
         if (System.currentTimeMillis() - mExitTime > 2000) {
             Toasty.normal(MainActivity.this, "再按一次退出程序").show();
@@ -80,11 +69,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     public FragmentAnimator onCreateFragmentAnimator() {
         // 设置横向(和安卓4.x动画相同)
         return new DefaultHorizontalAnimator();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 
     @Override
