@@ -2,8 +2,11 @@ package com.rogrand.demo.ui.home.imageselector;
 
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.luck.picture.lib.compress.Luban;
@@ -19,6 +22,10 @@ import java.util.List;
 
 import butterknife.BindView;
 
+import static android.R.attr.width;
+import static android.R.attr.x;
+import static android.R.attr.y;
+
 /**
  * 显示图片选择结果界面
  * Created by Ricky on 2017-5-9.
@@ -26,6 +33,8 @@ import butterknife.BindView;
 
 public class ImageResultActivity extends SimpleActivity {
 
+    @BindView(R.id.tool_bar)
+    Toolbar mToolbar ;
     @BindView(R.id.recycler_image_result)
     RecyclerView mRecyclerView;
 
@@ -40,6 +49,14 @@ public class ImageResultActivity extends SimpleActivity {
 
     @Override
     protected void initEventAndData() {
+        setSupportActionBar(mToolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
+        }
+
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3, GridLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         mAdapter = new ShowImageAdapter(this, mAllDatas, onItemControlListener);
@@ -73,11 +90,11 @@ public class ImageResultActivity extends SimpleActivity {
                             .setMinSelectNum(0)//设置最小选择数量
                             .setSelectMode(FunctionConfig.MODE_MULTIPLE)//单选or多选
                             .setShowCamera(true)//是否显示拍照
-//                            .setEnablePreview(true)//是否启用预览效果
+                            .setEnablePreview(true)//是否启用预览效果
                             .setEnableCrop(false)//是否启用裁剪
                             .setCircularCut(false)//是否采用圆形裁剪
                             .setPreviewVideo(false)//是否预览视频
-                            .setCheckedBoxDrawable(0)//设置选择框样式
+                            //.setCheckedBoxDrawable(0)//设置选择框样式
 //                            .setRecordVideoDefinition(FunctionConfig.HIGH)//设置视频清晰程度
 //                            .setRecordVideoSecond(60)//设置视频秒数
                             .setGif(true)//是否显示GIF，默认不显示
@@ -105,7 +122,7 @@ public class ImageResultActivity extends SimpleActivity {
 //                            .setPicture_title_color(ContextCompat.getColor(MainActivity.this, R.color.black)) // 设置标题字体颜色
 //                            .setPicture_right_color(ContextCompat.getColor(MainActivity.this, R.color.black)) // 设置标题右边字体颜色
 //                            .setLeftBackDrawable(R.mipmap.back2) // 设置返回键图标
-//                            .setStatusBar(ContextCompat.getColor(MainActivity.this, R.color.white)) // 设置状态栏颜色，默认是和标题栏一致
+                            .setStatusBar(ContextCompat.getColor(mContext, R.color.colorPrimaryDark)) // 设置状态栏颜色，默认是和标题栏一致
 //                            .setImmersive(false)// 是否改变状态栏字体颜色(黑色)
                             .create();
                     PictureConfig.getInstance().init(options).openPhoto(ImageResultActivity.this, resultCallback);
@@ -138,4 +155,13 @@ public class ImageResultActivity extends SimpleActivity {
             mAdapter.notifyDataSetChanged();
         }
     };
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home){
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
