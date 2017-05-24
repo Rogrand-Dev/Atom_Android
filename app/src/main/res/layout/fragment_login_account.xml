@@ -1,0 +1,107 @@
+<?xml version="1" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/passport_divider_horizontal"
+        android:orientation="vertical"
+        android:showDividers="end|beginning">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:text="@string/passport_account"
+                android:textColor="@color/passport_black1"
+                android:textSize="@dimen/text_h15" />
+
+            <AutoCompleteTextView
+                android:id="@+id/username"
+                style="@style/passport_editText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="@string/passport_please_enter_phone"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@+id/password" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/passport_divider_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:text="@string/passport_password"
+                android:textColor="@color/passport_black1"
+                android:textSize="@dimen/text_h15" />
+
+            <AutoCompleteTextView
+                android:id="@+id/password"
+                style="@style/passport_editText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="@string/passport_login_password_is_null"
+                android:imeOptions="actionGo"
+                android:inputType="textPassword"
+                android:nextFocusForward="@+id/login" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.rogrand.atom.widget.ButtonStyle
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="16dp"
+        android:minHeight="44dp"
+        android:text="@string/passport_login"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_h16"
+        app:normal_color="@color/hex_f34d41"
+        app:press_color="@color/hex_e7493e" />
+
+
+    <TextView
+        android:id="@+id/retrieve_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/passport_login_questions"
+        android:textColor="#868686"
+        android:textSize="@dimen/text_h12" />
+</LinearLayout>

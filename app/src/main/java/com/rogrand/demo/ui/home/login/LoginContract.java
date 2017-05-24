@@ -9,8 +9,6 @@ interface LoginContract {
 
     interface View extends BaseView {
 
-        void loginSuccess(int authState);
-
         void showOtherLogins();
 
         void hideOtherLogins();
@@ -22,20 +20,11 @@ interface LoginContract {
 
     interface Presenter extends BasePresenter<View> {
 
-        void onRegisterClick(Context context);
-
-        void login(Context context, String userName, String passWord);
-
         void onPageChange(int pos);
 
         void onDrawerSwitchClick(boolean isDrawerOpen);
 
-        void onSinaLoginClick(Context context);
+        void onRegisterClick(Context context);
 
-        void onWechatLoginClick(Context context);
-
-        void onQQLoginClick(Context context);
-
-        void onBaiduLoginCLick(Context context);
     }
 }

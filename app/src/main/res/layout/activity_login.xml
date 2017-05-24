@@ -3,50 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:background="@color/colorAccent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:text="登录"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tv_cat_eye_login_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:text="注册"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
-
-
-    </RelativeLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_cat_eye_login"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        app:tabIndicatorColor="#F34D41"
-        app:tabSelectedTextColor="#F34D41"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
         app:tabTextColor="#686868" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="#E5E5E5" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_cat_eye_login"
@@ -54,146 +24,97 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <!--容器-->
     <LinearLayout
         android:id="@+id/vg_cat_eye_login_other_logins"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--抽屉-->
         <LinearLayout
-            android:id="@+id/vg_cat_eye_login_other_logins_drawer"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_centerVertical="true"
-                    android:background="#EFEFEF" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:gravity="center_vertical">
 
                 <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/passport_divider_horizontal_oauth" />
+
+                <FrameLayout
                     android:id="@+id/iv_cat_eye_login_switch"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="#E5E5E5" />
-            </RelativeLayout>
+                    android:layout_width="40.0dp"
+                    android:layout_height="40.0dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/passport_oauth_switch_background">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:button="@drawable/passport_oauth_switch_arrow"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:scaleType="center"
+                        android:textOff="@null"
+                        android:textOn="@null" />
+                </FrameLayout>
+            </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:text="-其他登录方式-"
-                android:textColor="#999999" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16.0dp"
+                android:layout_marginTop="15.0dp"
+                android:text="@string/passport_oauth_login"
+                android:textColor="@color/passport_black3"
+                android:textSize="@dimen/text_h14" />
+        </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/vg_cat_eye_login_other_logins_inner"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:orientation="horizontal">
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/login_weixin"
+                android:gravity="center"
+                android:text="微信" />
 
-                <LinearLayout
-                    android:id="@+id/vg_cat_eye_login_sina"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/login_qq"
+                android:gravity="center"
+                android:text="QQ" />
 
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="#FF812C" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="6dp"
-                        android:gravity="center"
-                        android:text="新浪" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/vg_cat_eye_login_wechat"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="#61CB29" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="6dp"
-                        android:gravity="center"
-                        android:text="微信" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/vg_cat_eye_login_qq"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="#3C94FF" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="6dp"
-                        android:gravity="center"
-                        android:text="QQ" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/vg_cat_eye_login_baidu"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="#5770EE" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="6dp"
-                        android:gravity="center"
-                        android:text="百度" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/login_weibo"
+                android:gravity="center"
+                android:text="微博" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

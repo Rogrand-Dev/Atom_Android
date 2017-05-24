@@ -5,22 +5,9 @@
     android:background="#fafafa"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:background="@color/colorAccent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:text="注册"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"

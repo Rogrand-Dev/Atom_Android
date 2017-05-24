@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20.0dp"
+        android:showDividers="end|middle">
+
+        <RelativeLayout
+            android:id="@+id/llUserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="111.0dp"
+            android:background="?attr/colorPrimary"
+            android:paddingLeft="17.0dp">
+
+            <com.rogrand.atom.widget.CircleImageView
+                android:id="@+id/iv_user_profile"
+                android:layout_width="64.0dp"
+                android:layout_height="64.0dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/image_default_user_header"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:id="@+id/user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_toRightOf="@+id/iv_user_profile"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5.0dp"
+                        android:maxWidth="210.0dp"
+                        android:singleLine="true"
+                        android:text="Rogrand"
+                        android:textColor="@color/color_white_pressed_gray1"
+                        android:textSize="@dimen/text_h17" />
+
+                    <TextView
+                        android:id="@+id/iv_user_level_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dp"
+                        android:background="@drawable/shape_mine_center_vip"
+                        android:drawablePadding="5.0dp"
+                        android:singleLine="true"
+                        android:text="v2钻石会员"
+                        android:textColor="@color/color_white_pressed_gray1"
+                        android:textSize="12.0sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.0dp"
+                    android:layout_height="10.0dp"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15.0dp"
+                android:duplicateParentState="true"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_arrow_right_white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hex_ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/mine_wish"
+                style="@style/mine_my_ticket_coupon_comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_wish_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_my_wish" />
+
+                <TextView
+                    android:id="@+id/tv_mine_wish"
+                    style="@style/mine_my_ticket"
+                    android:layout_below="@+id/iv_mine_wish_icon"
+                    android:text="想看" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12.0dp"
+                android:layout_marginTop="12.0dp"
+                android:background="@color/hex_e5e5e5" />
+
+            <RelativeLayout
+                android:id="@+id/ll_mine_seen"
+                style="@style/mine_my_ticket_coupon_comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_seen_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_my_seen" />
+
+                <TextView
+                    android:id="@+id/tv_mine_seen"
+                    style="@style/mine_my_ticket"
+                    android:layout_below="@+id/iv_mine_seen_icon"
+                    android:text="看过" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12.0dp"
+                android:layout_marginTop="12.0dp"
+                android:background="@color/hex_e5e5e5" />
+
+            <RelativeLayout
+                android:id="@+id/ll_mine_comment"
+                style="@style/mine_my_ticket_coupon_comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_comment_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_my_comment" />
+
+                <TextView
+                    android:id="@+id/tv_mine_comment_text"
+                    style="@style/mine_my_ticket"
+                    android:layout_below="@+id/iv_mine_comment_icon"
+                    android:text="影评" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12.0dp"
+                android:layout_marginTop="12.0dp"
+                android:background="@color/hex_e5e5e5" />
+
+            <RelativeLayout
+                android:id="@+id/ll_mine_topic"
+                style="@style/mine_my_ticket_coupon_comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_topic_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_my_topic" />
+
+                <TextView
+                    android:id="@+id/tv_mine_topic_text"
+                    style="@style/mine_my_ticket"
+                    android:layout_below="@+id/iv_mine_topic_icon"
+                    android:text="话题" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15.0dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_mine_order"
+            style="@style/mine_list_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_height">
+
+            <TextView
+                style="@style/mine_list_item"
+                android:text="@string/mine_my_order" />
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/mine_my_order_all"
+                android:textColor="@color/hex_999999"
+                android:textSize="14.0sp"
+                android:visibility="visible" />
+
+            <TextView style="@style/mine_list_item_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mine_order_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/ll_mine_unused"
+                style="@style/mine_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_order_unused_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_order_ununsed" />
+
+                <TextView
+                    android:id="@+id/iv_mine_order_unused"
+                    style="@style/mine_my_order_detail"
+                    android:layout_below="@+id/iv_mine_order_unused_icon"
+                    android:text="@string/order_unconsume" />
+
+                <TextView
+                    android:id="@+id/iv_mine_order_unused_num"
+                    style="@style/mine_my_ticket_coupon_comment_num"
+                    android:layout_toRightOf="@+id/iv_mine_order_unused_icon"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_mine_unpaied"
+                style="@style/mine_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_order_unpaied_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_order_unpaied" />
+
+                <TextView
+                    android:id="@+id/iv_mine_order_unpaied"
+                    style="@style/mine_my_order_detail"
+                    android:layout_below="@+id/iv_mine_order_unpaied_icon"
+                    android:text="@string/order_unpay" />
+
+                <TextView
+                    android:id="@+id/iv_mine_order_unpaied_num"
+                    style="@style/mine_my_ticket_coupon_comment_num"
+                    android:layout_toRightOf="@+id/iv_mine_order_unpaied_icon"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_mine_uncomment"
+                style="@style/mine_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_order_uncomment_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_order_uncomment" />
+
+                <TextView
+                    android:id="@+id/iv_mine_order_uncomment"
+                    style="@style/mine_my_order_detail"
+                    android:layout_below="@+id/iv_mine_order_uncomment_icon"
+                    android:text="@string/order_uncomment" />
+
+                <TextView
+                    android:id="@+id/iv_mine_order_uncomment_num"
+                    style="@style/mine_my_ticket_coupon_comment_num"
+                    android:layout_toRightOf="@+id/iv_mine_order_uncomment_icon"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_mine_refund"
+                style="@style/mine_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <ImageView
+                    android:id="@+id/iv_mine_order_refund_icon"
+                    android:layout_width="24.0dp"
+                    android:layout_height="24.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_mine_order_refund" />
+
+                <TextView
+                    android:id="@+id/iv_mine_order_refund"
+                    style="@style/mine_my_order_detail"
+                    android:layout_below="@+id/iv_mine_order_refund_icon"
+                    android:text="@string/order_refund" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:divider="@drawable/line_one_px"
+            android:orientation="vertical"
+            android:showDividers="end|middle|beginning">
+
+            <LinearLayout
+                android:id="@+id/llmessagecenter"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height">
+
+                <TextView
+                    style="@style/mine_list_item"
+                    android:text="@string/mine_message" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/tvMessageNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_solid_rectangle_red_12sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_my_collect"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height">
+
+                <TextView
+                    style="@style/mine_list_item"
+                    android:text="@string/mine_collection" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMaoyanVip"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height">
+
+                <TextView
+                    android:id="@+id/tv_vip_name"
+                    style="@style/mine_list_item"
+                    android:text="@string/mine_maoyan_vip" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_vip_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/hex_f34d41"
+                    android:textSize="14.0sp"
+                    android:visibility="visible" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMaoyanAchieve"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_achieve_title"
+                    style="@style/mine_list_item"
+                    android:text="@string/mine_achieve" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_achieve_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/hex_f34d41"
+                    android:textSize="14.0sp"
+                    android:visibility="visible" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line_member_new_year"
+                layout="@layout/line_one_px"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:divider="@drawable/line_one_px"
+            android:orientation="vertical"
+            android:showDividers="end|middle|beginning">
+
+            <LinearLayout
+                android:id="@+id/llMineCoupon"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height">
+
+                <TextView
+                    style="@style/mine_list_item"
+                    android:text="@string/mine_seatcoupon" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/tvMineCouponNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/mine_seatcoupon_useful_num"
+                    android:textColor="@color/hex_999999"
+                    android:textSize="14.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvMineCouponNewNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_solid_rectangle_red_12sp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEMember"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height">
+
+                <TextView
+                    style="@style/mine_list_item"
+                    android:text="@string/mine_cinema_emember" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/mine_emember_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/hex_999999"
+                    android:textSize="@dimen/text_h14" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMineShoppingCenter"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height">
+
+                <TextView
+                    style="@style/mine_list_item"
+                    android:layout_width="0.0dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/mine_shopping_center" />
+
+                <FrameLayout
+                    android:id="@+id/cartoon"
+                    android:layout_width="40.0dp"
+                    android:layout_height="40.0dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/cartoon_image"
+                        android:layout_width="30.0dp"
+                        android:layout_height="30.0dp"
+                        android:layout_gravity="center" />
+
+                    <View
+                        android:id="@+id/notice_new"
+                        android:layout_width="10.0dp"
+                        android:layout_height="10.0dp"
+                        android:layout_gravity="center|top"
+                        android:layout_marginLeft="13.0dp"
+                        android:layout_marginTop="3.0dp"
+                        android:background="@drawable/ic_notice_red" />
+                </FrameLayout>
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15.0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llMineInvite"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/llMineInvite_text"
+                    style="@style/mine_list_item"
+                    android:layout_width="0.0dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/mine_invite" />
+
+                <TextView
+                    android:id="@+id/llMineInvite_text_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="立即邀请"
+                    android:textColor="@color/hex_f34d41"
+                    android:textSize="14.0sp"
+                    android:visibility="visible" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line_mine_invite"
+                layout="@layout/line_one_left_52dp" />
+
+            <LinearLayout
+                android:id="@+id/llMineSetting"
+                style="@style/mine_list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mine_item_height">
+
+                <TextView
+                    style="@style/mine_list_item"
+                    android:text="@string/mine_setting" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/tvSettingNewNotify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_solid_rectangle_red_12sp"
+                    android:gravity="center"
+                    android:text="@string/mine_new"
+                    android:textColor="@android:color/white"
+                    android:textSize="12.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvSettingPhoneBinding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/user_phone_binding"
+                    android:textColor="@color/hex_999999"
+                    android:textSize="14.0sp" />
+
+                <TextView style="@style/mine_list_item_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/jumpTest_divide"
+            android:layout_width="match_parent"
+            android:layout_height="15.0dp" />
+
+        <TextView
+            android:id="@+id/jumpTest"
+            style="@style/mine_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_item_height"
+            android:background="@drawable/bg_white_pressed"
+            android:drawableLeft="@drawable/ic_mine_setting"
+            android:drawableRight="@drawable/arrow_right_gray_press_white"
+            android:paddingLeft="15.0dp"
+            android:paddingRight="15.0dp"
+            android:text="@string/options_test"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

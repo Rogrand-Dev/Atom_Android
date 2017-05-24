@@ -12,6 +12,7 @@ import com.rogrand.demo.R;
 import com.rogrand.demo.event.StartBrotherEvent;
 import com.rogrand.demo.event.TabSelectedEvent;
 import com.rogrand.demo.ui.home.HomeTabFragment;
+import com.rogrand.demo.ui.my.MyTabFragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -41,7 +42,7 @@ public class MainFragment extends SupportFragment {
         if (savedInstanceState == null) {
             mFragments[FIRST] = HomeTabFragment.newInstance();
             mFragments[SECOND] = HomeTabFragment.newInstance();
-            mFragments[THIRD] = HomeTabFragment.newInstance();
+            mFragments[THIRD] = MyTabFragment.newInstance();
 
             loadMultipleRootFragment(R.id.fl_tab_container, FIRST,
                     mFragments[FIRST],
@@ -51,8 +52,8 @@ public class MainFragment extends SupportFragment {
             // 这里库已经做了Fragment恢复,所有不需要额外的处理了, 不会出现重叠问题
             // 这里我们需要拿到mFragments的引用,也可以通过getChildFragmentManager.getFragments()自行进行判断查找(效率更高些),用下面的方法查找更方便些
             mFragments[FIRST] = findChildFragment(HomeTabFragment.class);
-            mFragments[SECOND] = findChildFragment(HomeTabFragment.class); // ToolTabFragment
-            mFragments[THIRD] = findChildFragment(HomeTabFragment.class); // OtherTabFragment
+            mFragments[SECOND] = findChildFragment(HomeTabFragment.class);
+            mFragments[THIRD] = findChildFragment(MyTabFragment.class);
         }
 
         initView(view);

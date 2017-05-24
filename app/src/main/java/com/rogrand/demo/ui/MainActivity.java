@@ -43,7 +43,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected void initInject() {
-//        getActivityComponent().inject(this);
+        getActivityComponent().inject(this);
     }
 
     @Override
@@ -53,6 +53,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     protected void initEventAndData() {
+
     }
 
     @Override

@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">Atom</string>
+    <string name="mine_my_order">我的订单</string>
+    <string name="mine_my_order_all">全部</string>
+    <string name="order_unconsume">未消费</string>
+    <string name="order_unpay">待付款</string>
+    <string name="order_uncomment">待评价</string>
+    <string name="order_refund">退款</string>
+    <string name="mine_message">我的消息</string>
+    <string name="mine_collection">我的收藏</string>
+    <string name="mine_maoyan_vip">会员中心</string>
+    <string name="mine_achieve">我的成就</string>
+    <string name="mine_seatcoupon">优惠券</string>
+    <string name="mine_seatcoupon_useful_num">2张可用</string>
+    <string name="mine_cinema_emember">影院会员卡</string>
+    <string name="mine_shopping_center">商城</string>
+    <string name="mine_invite">邀请好友送代金券</string>
+    <string name="mine_setting">设置</string>
+    <string name="mine_new">new</string>
+    <string name="user_phone_binding">手机绑定与更换</string>
+    <string name="options_test">测试</string>
+    <string name="passport_oauth_login">-其他登录方式-</string>
+    <string name="passport_account">账号</string>
+    <string name="passport_password">密码</string>
+    <string name="passport_please_enter_phone">请输入手机号</string>
+    <string name="passport_login_password_is_null">请输入密码</string>
+    <string name="passport_login_questions">登录遇到问题?</string>
+    <string name="passport_phone_number">手机号</string>
+    <string name="passport_code">验证码</string>
+    <string name="passport_support_phone">仅支持中国大陆手机号</string>
+    <string name="passport_enter_code">请输入验证码</string>
+    <string name="passport_retrieve_code">获取验证码</string>
+    <string name="passport_login">登录</string>
+    <string name="passport_login_term_agreed">登录即视为同意《用户协议》</string>
 </resources>

@@ -1,11 +1,119 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">#FFFFFF</item>
+        <!-- 背景色 -->
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <!-- Activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/MyAnimationActivity</item>
+    </style>
+
+    <style name="MyAnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/enter_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/exit_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/enter_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/exit_right</item>
+        <item name="android:taskOpenEnterAnimation">@anim/enter_right</item>
+        <item name="android:taskOpenExitAnimation">@anim/exit_left</item>
+        <item name="android:taskCloseEnterAnimation">@anim/enter_left</item>
+        <item name="android:taskCloseExitAnimation">@anim/exit_right</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/enter_right</item>
+        <item name="android:taskToFrontExitAnimation">@anim/exit_left</item>
+        <item name="android:taskToBackEnterAnimation">@anim/enter_left</item>
+        <item name="android:taskToBackExitAnimation">@anim/exit_right</item>
+    </style>
+
+    <style name="mine_my_ticket_coupon_comment_layout">
+        <item name="android:background">@drawable/transparent_selector</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+    </style>
+
+    <style name="mine_my_ticket">
+        <item name="android:textSize">@dimen/text_h13</item>
+        <item name="android:textColor">@color/hex_333333</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="mine_list_item_layout">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/bg_white_pressed</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+    </style>
+
+    <style name="mine_list_item">
+        <item name="android:textSize">@dimen/text_h15</item>
+        <item name="android:textColor">@color/hex_222222</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">15.0dip</item>
+    </style>
+
+    <style name="mine_list_item_arrow">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#ffbbbbbb</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableRight">@drawable/arrow_right_gray_press_white</item>
+        <item name="android:drawablePadding">9.0dip</item>
+    </style>
+
+    <style name="mine_my_order">
+        <item name="android:background">@drawable/bg_white_pressed</item>
+        <item name="android:paddingBottom">8.0dip</item>
+    </style>
+
+    <style name="mine_my_order_detail">
+        <item name="android:textSize">@dimen/text_h12</item>
+        <item name="android:textColor">@color/hex_333333</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6.0dip</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="mine_my_ticket_coupon_comment_num">
+        <item name="android:textSize">@dimen/text_h10</item>
+        <item name="android:textColor">@color/hex_ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_solid_rectangle_red_10sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">-8.0dip</item>
+        <item name="android:layout_marginTop">4.0dip</item>
+    </style>
+
+    <style name="line_one_px">
+        <item name="android:background">@color/hex_e5e5e5</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0px</item>
+    </style>
+
+    <style name="passport_editText">
+        <item name="android:textAppearance">?android:textAppearance</item>
+        <item name="android:textSize">@dimen/text_h15</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColorHint">@color/textColorSecondary</item>
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">46.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">normal|actionUnspecified</item>
     </style>
 
 </resources>

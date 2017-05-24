@@ -2,6 +2,7 @@ package com.rogrand.demo.ui.home.register;
 
 import android.graphics.Color;
 import android.support.v7.widget.AppCompatCheckBox;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -27,48 +28,38 @@ import butterknife.BindView;
 
 public class RegisterActivity extends BaseActivity<RegisterPresenter> implements RegisterContract.View {
 
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
     @BindView(R.id.tv_register_input_phone_number)
     TextView mTvInputPhoneNumber;
-
     @BindView(R.id.tv_register_input_verify_code)
     TextView mTvInputVerifyCode;
-
     @BindView(R.id.tv_register_input_password)
     TextView mTvInputPassword;
-
     @BindView(R.id.vg_register_input_phone_number)
     ViewGroup mVgInputPhoneNumber;
-
     @BindView(R.id.vg_register_input_verify_code)
     ViewGroup mVgInputVerifyCode;
-
     @BindView(R.id.vg_register_input_password)
     ViewGroup mVgInputPassword;
-
     @BindView(R.id.et_register_phone_number)
     EditText mEtPhoneNumber;
-
     @BindView(R.id.btn_register_send_verify_code)
     Button mBtnSendVerifyCode;
-
     @BindView(R.id.accb_register_user_agreement)
     AppCompatCheckBox mCbUserAgreement;
-
     @BindView(R.id.et_register_verify_code)
     EditText mEtVerifyCode;
-
     @BindView(R.id.btn_register_confirm_verify_code)
     Button mBtnConfirmVerifyCode;
-
     @BindView(R.id.et_register_password)
     EditText mEtPassword;
-
     @BindView(R.id.btn_register_submit_password)
     Button mBtnSubmitPassword;
 
     @Override
     protected void initInject() {
-        mPresenter = new RegisterPresenter();
+        getActivityComponent().inject(this);
     }
 
     @Override
@@ -78,7 +69,7 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
 
     @Override
     protected void initEventAndData() {
-        getSupportActionBar().hide();
+        setToolBar(mToolbar, "注册");
         mEtPhoneNumber.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

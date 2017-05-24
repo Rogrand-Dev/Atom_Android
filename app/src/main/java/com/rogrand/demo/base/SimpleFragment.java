@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +55,16 @@ public abstract class SimpleFragment extends SupportFragment {
     public void onDestroyView() {
         super.onDestroyView();
         mUnBinder.unbind();
+    }
+
+    protected void setToolBar(Toolbar toolbar, String title) {
+        AppCompatActivity mAppCompatActivity = (AppCompatActivity) mActivity;
+        toolbar.setTitle(title);
+        mAppCompatActivity.setSupportActionBar(toolbar);
+        if (mAppCompatActivity.getSupportActionBar() != null) {
+            mAppCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            mAppCompatActivity.getSupportActionBar().setDisplayShowHomeEnabled(false);
+        }
     }
 
     protected abstract int getLayoutId();

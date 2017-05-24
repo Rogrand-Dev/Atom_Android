@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="text_h8">8sp</dimen>
+    <dimen name="text_h9">9sp</dimen>
+    <dimen name="text_h10">10sp</dimen>
+    <dimen name="text_h11">11sp</dimen>
+    <dimen name="text_h12">12sp</dimen>
+    <dimen name="text_h13">13sp</dimen>
+    <dimen name="text_h14">14sp</dimen>
+    <dimen name="text_h15">15sp</dimen>
+    <dimen name="text_h16">16sp</dimen>
+    <dimen name="text_h17">17sp</dimen>
+    <dimen name="text_h18">18sp</dimen>
+    <dimen name="text_h19">19sp</dimen>
+    <dimen name="text_h20">20sp</dimen>
+    <dimen name="text_h21">21sp</dimen>
+    <dimen name="text_h26">26sp</dimen>
+    <dimen name="text_h48">48sp</dimen>
+    <dimen name="mine_item_height">45dp</dimen>
+
 </resources>

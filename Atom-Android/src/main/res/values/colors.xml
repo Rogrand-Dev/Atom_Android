@@ -12,5 +12,6 @@
     <color name="colorTitle">#FF222222</color>
     <!--内容颜色-->
     <color name="colorContent">#666666</color>
+    <color name="defaultColor">#AEDEF4</color>
 
 </resources>
