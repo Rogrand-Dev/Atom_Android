@@ -32,4 +32,24 @@
     <string name="passport_retrieve_code">获取验证码</string>
     <string name="passport_login">登录</string>
     <string name="passport_login_term_agreed">登录即视为同意《用户协议》</string>
+    <string name="offical_notify">系统通知</string>
+    <string name="button_clean_cache">清空缓存</string>
+    <string name="button_marketgrade">去评分</string>
+    <string name="button_feedback">意见反馈</string>
+    <string name="button_app_check">检查新版本</string>
+    <string name="button_about">关于</string>
+    <string name="settings_user_logout">退出登录</string>
+    <string name="user_protocol">用户协议</string>
+    <string name="seat_order_detail_kefu_about">客服电话</string>
+    <string name="seat_order_detail_kefu_work_time">工作时间：9:00-24:00</string>
+    <string name="seat_order_detail_kefu_phone">1010-5335</string>
+    <string name="text_user_profile_img">头像</string>
+    <string name="text_user_nick_name">昵称</string>
+    <string name="text_user_gender">性别</string>
+    <string name="text_user_birthday">生日</string>
+    <string name="text_user_city">所在城市</string>
+    <string name="life_title">生活状态</string>
+    <string name="job_title">从事行业</string>
+    <string name="user_interest">兴趣爱好</string>
+    <string name="user_address">收货地址</string>
 </resources>

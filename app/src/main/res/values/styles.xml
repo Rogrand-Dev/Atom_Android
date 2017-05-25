@@ -13,6 +13,11 @@
         <item name="android:windowAnimationStyle">@style/MyAnimationActivity</item>
     </style>
 
+    <!-- toolbar标题文字大小 -->
+    <style name="ToolbarTitleSize" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">17sp</item>
+    </style>
+
     <style name="MyAnimationActivity" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/enter_right</item>
         <item name="android:activityOpenExitAnimation">@anim/exit_left</item>
@@ -30,10 +35,10 @@
 
     <style name="mine_my_ticket_coupon_comment_layout">
         <item name="android:background">@drawable/transparent_selector</item>
-        <item name="android:paddingLeft">10.0dip</item>
-        <item name="android:paddingTop">12.0dip</item>
-        <item name="android:paddingRight">10.0dip</item>
-        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">12dp</item>
     </style>
 
     <style name="mine_my_ticket">
@@ -41,7 +46,7 @@
         <item name="android:textColor">@color/hex_333333</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">5.0dip</item>
+        <item name="android:layout_marginTop">5dp</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
 
@@ -49,8 +54,8 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@drawable/bg_white_pressed</item>
-        <item name="android:paddingLeft">15.0dip</item>
-        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
     </style>
 
     <style name="mine_list_item">
@@ -60,23 +65,23 @@
         <item name="android:duplicateParentState">true</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:drawablePadding">15.0dip</item>
+        <item name="android:drawablePadding">15dp</item>
     </style>
 
     <style name="mine_list_item_arrow">
-        <item name="android:textSize">15.0sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">#ffbbbbbb</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:duplicateParentState">true</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:drawableRight">@drawable/arrow_right_gray_press_white</item>
-        <item name="android:drawablePadding">9.0dip</item>
+        <item name="android:drawablePadding">9dp</item>
     </style>
 
     <style name="mine_my_order">
         <item name="android:background">@drawable/bg_white_pressed</item>
-        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:paddingBottom">8dp</item>
     </style>
 
     <style name="mine_my_order_detail">
@@ -84,7 +89,7 @@
         <item name="android:textColor">@color/hex_333333</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">6.0dip</item>
+        <item name="android:layout_marginTop">6dp</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
 
@@ -95,13 +100,13 @@
         <item name="android:background">@drawable/shape_solid_rectangle_red_10sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">-8.0dip</item>
-        <item name="android:layout_marginTop">4.0dip</item>
+        <item name="android:layout_marginLeft">-8dp</item>
+        <item name="android:layout_marginTop">4dp</item>
     </style>
 
     <style name="line_one_px">
         <item name="android:background">@color/hex_e5e5e5</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
     </style>
 
@@ -111,7 +116,7 @@
         <item name="android:textColor">@color/textColorPrimary</item>
         <item name="android:textColorHint">@color/textColorSecondary</item>
         <item name="android:background">@null</item>
-        <item name="android:minHeight">46.0dip</item>
+        <item name="android:minHeight">46dp</item>
         <item name="android:singleLine">true</item>
         <item name="android:imeOptions">normal|actionUnspecified</item>
     </style>

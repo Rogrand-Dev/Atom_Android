@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                layout="@layout/line_one_px"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:id="@+id/llyt_offical"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="@string/offical_notify"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="@dimen/text_h15" />
+
+                    <CheckBox
+                        android:id="@+id/cb_offical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/switch_selector" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_clean_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/button_clean_cache"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="@dimen/text_h15" />
+
+                    <TextView
+                        android:id="@+id/cache_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true"
+                        android:text="20.0MB"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="@dimen/text_h15" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/line_one_px" />
+
+            <include
+                layout="@layout/line_one_px"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/tv_marketgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:drawableRight="@drawable/arrow_right_gray_press_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/button_marketgrade"
+                    android:textColor="@color/hex_666666"
+                    android:textSize="@dimen/text_h15" />
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:drawableRight="@drawable/arrow_right_gray_press_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/button_feedback"
+                    android:textColor="@color/hex_666666"
+                    android:textSize="@dimen/text_h15" />
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/button_app_check"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="@dimen/text_h15" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0" />
+
+                    <TextView
+                        android:id="@+id/tv_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_solid_rectangle_red_12sp"
+                        android:gravity="center"
+                        android:text="@string/mine_new"
+                        android:textColor="@android:color/white"
+                        android:textSize="12.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="@dimen/text_h15" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:drawableRight="@drawable/arrow_right_gray_press_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/button_about"
+                    android:textColor="@color/hex_666666"
+                    android:textSize="@dimen/text_h15" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/line_one_px"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="20dp" />
+
+            <com.rogrand.atom.widget.ButtonStyle
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/settings_user_logout"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_h16"
+                app:normal_color="@color/hex_f34d41"
+                app:press_color="@color/hex_e7493e" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

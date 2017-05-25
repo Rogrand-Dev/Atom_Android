@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/line_one_px"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llyt_user_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/text_user_profile_img"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <com.rogrand.atom.widget.CircleImageView
+                        android:id="@+id/user_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/image_default_user_header" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_user_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="@string/text_user_nick_name"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="Rogrand"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_user_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/text_user_gender"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:duplicateParentState="true"
+                        android:text="女"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_user_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/text_user_birthday"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:duplicateParentState="true"
+                        android:text="1997-09-08"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_user_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/text_user_city"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:duplicateParentState="true"
+                        android:text="武汉"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/line_one_px"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="15dp" />
+
+            <include layout="@layout/line_one_px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llyt_user_life"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/life_title"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_marriage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:duplicateParentState="true"
+                        android:text="单身"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_occupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/job_title"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_occupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:duplicateParentState="true"
+                        android:text="IT"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line_one_px"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/llyt_interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/user_interest"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:duplicateParentState="true"
+                        android:text="体育、科技"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                layout="@layout/line_one_px"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llyt_user_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/transparent_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:text="@string/user_address"
+                        android:textColor="@color/hex_666666"
+                        android:textSize="15.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:duplicateParentState="true"
+                        android:text="武汉市东湖高新"
+                        android:textColor="@color/hex_999999"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/arrow_right_gray_press_white"
+                        android:duplicateParentState="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/line_one_px"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

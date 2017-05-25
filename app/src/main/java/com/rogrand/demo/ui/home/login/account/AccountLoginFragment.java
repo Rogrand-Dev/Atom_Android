@@ -39,10 +39,8 @@ public class AccountLoginFragment extends BaseFragment<AccountLoginPresenter> im
 
     @OnClick(R.id.login)
     void loginSubmit() {
-
         String mAccount = mEtAccount.getText().toString();
         String mPassword = mEtPassword.getText().toString();
-
         mPresenter.loginAccount(mContext, mAccount, mPassword);
     }
 

@@ -9,20 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="20.0dp"
+        android:paddingBottom="20dp"
         android:showDividers="end|middle">
 
         <RelativeLayout
-            android:id="@+id/llUserInfo"
+            android:id="@+id/rlyt_user_info"
             android:layout_width="match_parent"
-            android:layout_height="111.0dp"
+            android:layout_height="111dp"
             android:background="?attr/colorPrimary"
-            android:paddingLeft="17.0dp">
+            android:paddingLeft="17dp">
 
             <com.rogrand.atom.widget.CircleImageView
                 android:id="@+id/iv_user_profile"
-                android:layout_width="64.0dp"
-                android:layout_height="64.0dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/image_default_user_header"
@@ -34,8 +34,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="15.0dp"
-                android:layout_marginRight="10.0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/iv_user_profile"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
@@ -50,8 +50,8 @@
                         android:id="@+id/tv_user_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="5.0dp"
-                        android:maxWidth="210.0dp"
+                        android:drawablePadding="5dp"
+                        android:maxWidth="210dp"
                         android:singleLine="true"
                         android:text="Rogrand"
                         android:textColor="@color/color_white_pressed_gray1"
@@ -61,9 +61,9 @@
                         android:id="@+id/iv_user_level_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5.0dp"
+                        android:layout_marginTop="5dp"
                         android:background="@drawable/shape_mine_center_vip"
-                        android:drawablePadding="5.0dp"
+                        android:drawablePadding="5dp"
                         android:singleLine="true"
                         android:text="v2钻石会员"
                         android:textColor="@color/color_white_pressed_gray1"
@@ -71,8 +71,8 @@
                 </LinearLayout>
 
                 <View
-                    android:layout_width="0.0dp"
-                    android:layout_height="10.0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
                     android:layout_weight="1.0" />
             </LinearLayout>
 
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="15.0dp"
+                android:layout_marginRight="15dp"
                 android:duplicateParentState="true"
                 android:scaleType="fitEnd"
                 android:src="@drawable/ic_arrow_right_white" />
@@ -103,8 +103,8 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_wish_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_my_wish" />
@@ -119,8 +119,8 @@
             <View
                 android:layout_width="1.0px"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12.0dp"
-                android:layout_marginTop="12.0dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
                 android:background="@color/hex_e5e5e5" />
 
             <RelativeLayout
@@ -132,8 +132,8 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_seen_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_my_seen" />
@@ -148,8 +148,8 @@
             <View
                 android:layout_width="1.0px"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12.0dp"
-                android:layout_marginTop="12.0dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
                 android:background="@color/hex_e5e5e5" />
 
             <RelativeLayout
@@ -161,8 +161,8 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_comment_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_my_comment" />
@@ -177,8 +177,8 @@
             <View
                 android:layout_width="1.0px"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="12.0dp"
-                android:layout_marginTop="12.0dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
                 android:background="@color/hex_e5e5e5" />
 
             <RelativeLayout
@@ -190,8 +190,8 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_topic_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_my_topic" />
@@ -204,9 +204,13 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <View
+        <include
+            layout="@layout/line_one_px"
             android:layout_width="match_parent"
-            android:layout_height="15.0dp" />
+            android:layout_height="1.0px"
+            android:layout_marginBottom="15dp" />
+
+        <include layout="@layout/line_one_px" />
 
         <LinearLayout
             android:id="@+id/ll_mine_order"
@@ -219,7 +223,7 @@
                 android:text="@string/mine_my_order" />
 
             <TextView
-                android:layout_width="0.0dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.0" />
 
@@ -234,6 +238,8 @@
 
             <TextView style="@style/mine_list_item_arrow" />
         </LinearLayout>
+
+        <include layout="@layout/line_one_px" />
 
         <LinearLayout
             android:id="@+id/ll_mine_order_detail"
@@ -251,10 +257,10 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_order_unused_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="8.0dp"
+                    android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_order_ununsed" />
 
@@ -281,10 +287,10 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_order_unpaied_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="8.0dp"
+                    android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_order_unpaied" />
 
@@ -311,10 +317,10 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_order_uncomment_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="8.0dp"
+                    android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_order_uncomment" />
 
@@ -341,10 +347,10 @@
 
                 <ImageView
                     android:id="@+id/iv_mine_order_refund_icon"
-                    android:layout_width="24.0dp"
-                    android:layout_height="24.0dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="8.0dp"
+                    android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_mine_order_refund" />
 
@@ -356,10 +362,15 @@
             </RelativeLayout>
         </LinearLayout>
 
+        <include
+            layout="@layout/line_one_px"
+            android:layout_width="match_parent"
+            android:layout_height="1.0px"
+            android:layout_marginBottom="15dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:divider="@drawable/line_one_px"
             android:orientation="vertical"
             android:showDividers="end|middle|beginning">
@@ -375,7 +386,7 @@
                     android:text="@string/mine_message" />
 
                 <TextView
-                    android:layout_width="0.0dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0" />
 
@@ -403,7 +414,7 @@
                     android:text="@string/mine_collection" />
 
                 <TextView
-                    android:layout_width="0.0dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0" />
 
@@ -422,7 +433,7 @@
                     android:text="@string/mine_maoyan_vip" />
 
                 <TextView
-                    android:layout_width="0.0dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0" />
 
@@ -451,7 +462,7 @@
                     android:text="@string/mine_achieve" />
 
                 <TextView
-                    android:layout_width="0.0dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.0" />
 
@@ -466,220 +477,47 @@
 
                 <TextView style="@style/mine_list_item_arrow" />
             </LinearLayout>
-
-            <include
-                android:id="@+id/line_member_new_year"
-                layout="@layout/line_one_px"
-                android:visibility="gone" />
-
         </LinearLayout>
+
+        <include
+            layout="@layout/line_one_px"
+            android:layout_width="match_parent"
+            android:layout_height="1.0px"
+            android:layout_marginTop="15dp" />
 
         <LinearLayout
+            android:id="@+id/llyt_setting"
+            style="@style/mine_list_item_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:divider="@drawable/line_one_px"
-            android:orientation="vertical"
-            android:showDividers="end|middle|beginning">
+            android:layout_height="@dimen/mine_item_height">
 
-            <LinearLayout
-                android:id="@+id/llMineCoupon"
-                style="@style/mine_list_item_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/mine_item_height">
+            <TextView
+                style="@style/mine_list_item"
+                android:text="@string/mine_setting" />
 
-                <TextView
-                    style="@style/mine_list_item"
-                    android:text="@string/mine_seatcoupon" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
 
-                <TextView
-                    android:layout_width="0.0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.0" />
+            <TextView
+                android:id="@+id/tvSettingNewNotify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_solid_rectangle_red_12sp"
+                android:gravity="center"
+                android:text="@string/mine_new"
+                android:textColor="@android:color/white"
+                android:textSize="12.0sp" />
 
-                <TextView
-                    android:id="@+id/tvMineCouponNum"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/mine_seatcoupon_useful_num"
-                    android:textColor="@color/hex_999999"
-                    android:textSize="14.0sp"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/tvMineCouponNewNum"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_solid_rectangle_red_12sp"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@android:color/white"
-                    android:textSize="12.0sp"
-                    android:visibility="gone" />
-
-                <TextView style="@style/mine_list_item_arrow" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llEMember"
-                style="@style/mine_list_item_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/mine_item_height">
-
-                <TextView
-                    style="@style/mine_list_item"
-                    android:text="@string/mine_cinema_emember" />
-
-                <TextView
-                    android:layout_width="0.0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.0" />
-
-                <TextView
-                    android:id="@+id/mine_emember_des"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/hex_999999"
-                    android:textSize="@dimen/text_h14" />
-
-                <TextView style="@style/mine_list_item_arrow" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/llMineShoppingCenter"
-                style="@style/mine_list_item_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/mine_item_height">
-
-                <TextView
-                    style="@style/mine_list_item"
-                    android:layout_width="0.0dp"
-                    android:layout_weight="1.0"
-                    android:text="@string/mine_shopping_center" />
-
-                <FrameLayout
-                    android:id="@+id/cartoon"
-                    android:layout_width="40.0dp"
-                    android:layout_height="40.0dp"
-                    android:visibility="gone">
-
-                    <ImageView
-                        android:id="@+id/cartoon_image"
-                        android:layout_width="30.0dp"
-                        android:layout_height="30.0dp"
-                        android:layout_gravity="center" />
-
-                    <View
-                        android:id="@+id/notice_new"
-                        android:layout_width="10.0dp"
-                        android:layout_height="10.0dp"
-                        android:layout_gravity="center|top"
-                        android:layout_marginLeft="13.0dp"
-                        android:layout_marginTop="3.0dp"
-                        android:background="@drawable/ic_notice_red" />
-                </FrameLayout>
-
-                <TextView style="@style/mine_list_item_arrow" />
-            </LinearLayout>
+            <TextView style="@style/mine_list_item_arrow" />
         </LinearLayout>
 
-        <View
+        <include
+            layout="@layout/line_one_px"
             android:layout_width="match_parent"
-            android:layout_height="15.0dp" />
+            android:layout_height="1.0px"
+            android:layout_marginBottom="20dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/llMineInvite"
-                style="@style/mine_list_item_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/mine_item_height"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/llMineInvite_text"
-                    style="@style/mine_list_item"
-                    android:layout_width="0.0dp"
-                    android:layout_weight="1.0"
-                    android:text="@string/mine_invite" />
-
-                <TextView
-                    android:id="@+id/llMineInvite_text_desc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="立即邀请"
-                    android:textColor="@color/hex_f34d41"
-                    android:textSize="14.0sp"
-                    android:visibility="visible" />
-
-                <TextView style="@style/mine_list_item_arrow" />
-            </LinearLayout>
-
-            <include
-                android:id="@+id/line_mine_invite"
-                layout="@layout/line_one_left_52dp" />
-
-            <LinearLayout
-                android:id="@+id/llMineSetting"
-                style="@style/mine_list_item_layout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/mine_item_height">
-
-                <TextView
-                    style="@style/mine_list_item"
-                    android:text="@string/mine_setting" />
-
-                <TextView
-                    android:layout_width="0.0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.0" />
-
-                <TextView
-                    android:id="@+id/tvSettingNewNotify"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_solid_rectangle_red_12sp"
-                    android:gravity="center"
-                    android:text="@string/mine_new"
-                    android:textColor="@android:color/white"
-                    android:textSize="12.0sp"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/tvSettingPhoneBinding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/user_phone_binding"
-                    android:textColor="@color/hex_999999"
-                    android:textSize="14.0sp" />
-
-                <TextView style="@style/mine_list_item_arrow" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:id="@+id/jumpTest_divide"
-            android:layout_width="match_parent"
-            android:layout_height="15.0dp" />
-
-        <TextView
-            android:id="@+id/jumpTest"
-            style="@style/mine_list_item"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/mine_item_height"
-            android:background="@drawable/bg_white_pressed"
-            android:drawableLeft="@drawable/ic_mine_setting"
-            android:drawableRight="@drawable/arrow_right_gray_press_white"
-            android:paddingLeft="15.0dp"
-            android:paddingRight="15.0dp"
-            android:text="@string/options_test"
-            android:visibility="gone" />
     </LinearLayout>
 </ScrollView>

@@ -8,4 +8,5 @@
     android:fitsSystemWindows="true"
     android:minHeight="?attr/actionBarSize"
     app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+    app:titleTextAppearance="@style/ToolbarTitleSize"
     app:titleTextColor="@android:color/white" />
