@@ -2,13 +2,11 @@ package com.rogrand.atom.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Map;
 
 /**
- * API 签名工具类
+ * 签名工具类
  */
 public class SignUtils {
 
@@ -30,13 +28,14 @@ public class SignUtils {
     }
 
     /**
-     * MD5 签名
+     * 签名
      *
-     * @param params 需签名的参数
-     * @param secret 加密密钥
+     * @param params    需签名的参数
+     * @param secret    加密密钥
+     * @param algorithm 加密方式
      * @return 签名结果
      */
-    public String signMd5(Map<String, String> params, String secret) {
+    public String sign(Map<String, String> params, String secret, String algorithm) {
 
         // 参数名排序
         String[] keyArray = params.keySet().toArray(new String[0]);
@@ -61,62 +60,14 @@ public class SignUtils {
         }
         temp.append(secret);
 
-        // MD5 加密
-        return MD5Utils.getIstance().MD5Encode(temp.toString());
+        String returnValue = temp.toString();
+
+        if (algorithm.equals("MD5")) {  // MD5 加密
+            returnValue = EncryptUtils.encryptMD5ToString(returnValue);
+        } else if (algorithm.equals("SHA1")) {  // SHA1 加密
+            returnValue = EncryptUtils.encryptSHA1ToString(returnValue);
+        }
+        return returnValue;
     }
 
-    /**
-     * @param params 需签名的参数
-     * @param secret 加密密钥
-     * @return 签名结果
-     */
-    public String signSha1(Map<String, String> params, String secret) {
-
-        // 参数名排序
-        String[] keyArray = params.keySet().toArray(new String[0]);
-        Arrays.sort(keyArray);
-
-        // 拼接参数
-        StringBuilder temp = new StringBuilder();
-        for (String key : keyArray) {
-            temp.append(key);
-
-            // 防止中文的参数值出现乱码，先转换为 UTF-8 编码
-            Object value = params.get(key);
-            if (null != value) {
-                try {
-                    String valueString = String.valueOf(value);
-                    temp.append(URLEncoder.encode(valueString, "UTF-8").replace("+", "%20").replace("*", "%2A").replace("%7E", "~"));
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }
-        temp.append(secret);
-
-        String strDes = "";
-        byte[] bt = temp.toString().getBytes();
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-1"); // 将此换成SHA-1、SHA-512、SHA-384等参数
-            md.update(bt);
-            strDes = bytes2Hex(md.digest());
-        } catch (NoSuchAlgorithmException e) {
-            return null;
-        }
-        return strDes.toUpperCase();
-    }
-
-    private String bytes2Hex(byte[] bts) {
-        String des = "";
-        String tmp = null;
-        for (int i = 0; i < bts.length; i++) {
-            tmp = (Integer.toHexString(bts[i] & 0xFF));
-            if (tmp.length() == 1) {
-                des += "0";
-            }
-            des += tmp;
-        }
-        return des;
-    }
 }

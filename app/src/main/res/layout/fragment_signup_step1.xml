@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:divider="@drawable/passport_divider_horizontal"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning">
+
+        <AutoCompleteTextView
+            android:id="@+id/mobile"
+            style="@style/passport_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/passport_please_input_phone_number"
+            android:inputType="phone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+    <com.rogrand.atom.widget.ButtonStyle
+        android:id="@+id/btn_get_verify_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:minHeight="48dp"
+        android:text="@string/passport_retrieve_verify_code"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_h16"
+        app:normal_color="@color/hex_f34d41"
+        app:press_color="@color/hex_e7493e" />
+
+    <CheckBox
+        android:id="@+id/cb_term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:checkMark="?android:textCheckMark"
+        android:checked="true"
+        android:gravity="center"
+        android:text="@string/passport_term_agreed" />
+</LinearLayout>

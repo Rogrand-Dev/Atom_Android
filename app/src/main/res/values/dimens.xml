@@ -18,5 +18,8 @@
     <dimen name="text_h26">26sp</dimen>
     <dimen name="text_h48">48sp</dimen>
     <dimen name="mine_item_height">45dp</dimen>
-
+    <dimen name="headerMarginStart">12dp</dimen>
+    <dimen name="headerMarginVertical">16dp</dimen>
+    <dimen name="sample_button_height">56dp</dimen>
+    <dimen name="sample_button_spacing">2dp</dimen>
 </resources>

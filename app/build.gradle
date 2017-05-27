@@ -44,18 +44,17 @@ dependencies {
     compile project(path: ':Atom-Android')
 
     // Butter Knife
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     //PictureSelector
     compile 'com.github.LuckSiege.PictureSelector:picture_library:v1.5.0'
     // Material Dialogs
-    compile 'com.afollestad.material-dialogs:core:0.9.4.4'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
     // Dagger 2
     compile 'com.google.dagger:dagger:2.11-rc2'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.11-rc2'
     // Fragmentation
-    compile 'me.yokeyword:fragmentation:0.10.4'
-    compile 'me.yokeyword:fragmentation-swipeback:0.10.4'
+    compile 'me.yokeyword:fragmentation:0.10.5'
     // EventBus
     compile 'org.greenrobot:eventbus:3.0.0'
     // RxJava2
@@ -85,5 +84,7 @@ dependencies {
     compile "com.github.VictorAlbertos.RxCache:runtime:1.8.0-2.x"
     compile 'com.github.VictorAlbertos.Jolyglot:gson:0.0.3'
     // Toasty
-    compile 'com.github.GrenderG:Toasty:1.2.3'
+    compile 'com.github.GrenderG:Toasty:1.2.5'
+    // Banner
+    compile 'com.youth.banner:banner:1.4.9'
 }

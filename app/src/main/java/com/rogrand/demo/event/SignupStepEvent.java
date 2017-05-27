@@ -1,10 +1,10 @@
 package com.rogrand.demo.event;
 
-public class TabSelectedEvent {
+public class SignupStepEvent {
 
     private int position;
 
-    public TabSelectedEvent(int position) {
+    public SignupStepEvent(int position) {
         this.position = position;
     }
 

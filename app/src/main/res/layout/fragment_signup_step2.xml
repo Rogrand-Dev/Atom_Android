@@ -1,0 +1,64 @@
+<?xml version="1" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:divider="@drawable/passport_divider_horizontal"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/et_code"
+                style="@style/passport_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint="@string/passport_please_input_verify_code" />
+
+            <com.rogrand.atom.widget.ButtonStyle
+                android:id="@+id/btn_resend_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp"
+                android:padding="8dp"
+                android:text="@string/passport_retrieve_again"
+                android:textColor="@color/passport_code_selector"
+                android:textSize="@dimen/text_h13"
+                app:normal_color="@color/passport_code_tip_back"
+                app:press_color="#F1F1F1"
+                app:stroke_color="@color/passport_code_border"
+                app:stroke_width="1px" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+    <com.rogrand.atom.widget.ButtonStyle
+        android:id="@+id/btn_submit_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:minHeight="48dp"
+        android:text="@string/passport_submit_verify_code"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_h16"
+        app:normal_color="@color/hex_f34d41"
+        app:press_color="@color/hex_e7493e" />
+</LinearLayout>

@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#A71814</color>
     <color name="colorAccent">#FF8269</color>
     <color name="homeBackground">#EBEBEB</color>
+    <color name="toolBackground">#FAFAFA</color>
     <color name="windowBackground">#F0EFF4</color>
     <color name="colorLine">#E2E2E2</color>
     <color name="hex_ffffff">#FFFFFFFF</color>

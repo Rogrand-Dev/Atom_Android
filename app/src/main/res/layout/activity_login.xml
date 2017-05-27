@@ -22,7 +22,8 @@
         android:id="@+id/vp_cat_eye_login"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:overScrollMode="never" />
 
     <LinearLayout
         android:id="@+id/vg_cat_eye_login_other_logins"

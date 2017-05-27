@@ -46,6 +46,14 @@
         <activity android:name=".ui.my.setting.about.AboutActivity" />
         <!--个人信息-->
         <activity android:name=".ui.my.userinfo.UserInfoActivity" />
+        <!--按钮-->
+        <activity android:name=".ui.tool.button.ButtonActivity" />
+        <!--Toast-->
+        <activity android:name=".ui.tool.toast.ToastActivity" />
+        <!--Banner-->
+        <activity android:name=".ui.tool.banner.BannerActivity" />
+        <!--Dialog-->
+        <activity android:name=".ui.tool.dialog.DialogActivity" />
     </application>
 
 </manifest>

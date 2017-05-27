@@ -3,6 +3,7 @@ package com.rogrand.demo.app;
 import android.app.Application;
 
 import com.facebook.stetho.Stetho;
+import com.rogrand.atom.utils.LogUtils;
 import com.rogrand.demo.R;
 import com.rogrand.demo.di.component.AppComponent;
 import com.rogrand.demo.di.component.DaggerAppComponent;
@@ -36,6 +37,7 @@ public class DemoApp extends Application {
 
         appContext = this;
         setDebug(getResources().getBoolean(R.bool.is_debug));
+        LogUtils.setIsDebug(isDebug());
         UrlConstants.init(this); // 初始化接口地址
         initStetho();
     }

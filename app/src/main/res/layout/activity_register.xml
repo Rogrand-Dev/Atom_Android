@@ -2,77 +2,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa"
     android:orientation="vertical">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/view_toolbar" />
 
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/step_tip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/white"
-        android:orientation="horizontal"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp">
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_register_input_phone_number"
+        <RadioButton
+            android:id="@+id/step1"
+            style="@style/passport_signupRadioButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="1输入手机号"
-            android:textColor="#f34d41" />
+            android:text="@string/passport_signup_step1_enter_mobile" />
 
-        <View
-            android:layout_width="6dp"
-            android:layout_height="10dp"
-            android:layout_gravity="center_vertical"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:background="#e4e4e3" />
+            android:background="@drawable/passport_right_arrow" />
 
-        <TextView
-            android:id="@+id/tv_register_input_verify_code"
+        <RadioButton
+            android:id="@+id/step2"
+            style="@style/passport_signupRadioButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="2输入验证码"
-            android:textColor="#686868" />
+            android:text="@string/passport_signup_step2_enter_verifycode" />
 
-        <View
-            android:layout_width="6dp"
-            android:layout_height="10dp"
-            android:layout_gravity="center_vertical"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:background="#e4e4e3" />
+            android:background="@drawable/passport_right_arrow" />
 
-        <TextView
-            android:id="@+id/tv_register_input_password"
+        <RadioButton
+            android:id="@+id/step3"
+            style="@style/passport_signupRadioButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="3设置密码"
-            android:textColor="#686868" />
+            android:text="@string/passport_signup_step3_set_password" />
+    </RadioGroup>
 
-    </LinearLayout>
-
-    <include
-        android:id="@+id/vg_register_input_phone_number"
-        layout="@layout/include_register_input_phone_number" />
-
-    <include
-        android:id="@+id/vg_register_input_verify_code"
-        layout="@layout/include_register_input_verify_code"
-        android:visibility="gone" />
-
-    <include
-        android:id="@+id/vg_register_input_password"
-        layout="@layout/include_register_input_password"
-        android:visibility="gone" />
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

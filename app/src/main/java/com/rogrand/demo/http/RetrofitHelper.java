@@ -38,7 +38,7 @@ public class RetrofitHelper implements HttpHelper {
         params.put("client_secret", UrlConstants.TOKEN_CLIENT_SECRET);
         params.put("grant_type", "password");
         params.put("scope", "read");*/
-        params.put("sign", SignUtils.getInstance().signSha1(params, Constants.MD5_SECRET));
+        params.put("sign", SignUtils.getInstance().sign(params, Constants.ENCRYPT_SECRET,"MD5"));
 
         return mApiService.login(params);
     }
