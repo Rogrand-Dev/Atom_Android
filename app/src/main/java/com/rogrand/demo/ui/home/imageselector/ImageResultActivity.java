@@ -22,10 +22,6 @@ import java.util.List;
 
 import butterknife.BindView;
 
-import static android.R.attr.width;
-import static android.R.attr.x;
-import static android.R.attr.y;
-
 /**
  * 显示图片选择结果界面
  * Created by Ricky on 2017-5-9.
