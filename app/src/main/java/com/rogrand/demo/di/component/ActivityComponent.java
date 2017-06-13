@@ -7,8 +7,11 @@ import com.rogrand.demo.di.scope.ActivityScope;
 import com.rogrand.demo.ui.MainActivity;
 import com.rogrand.demo.ui.home.login.LoginActivity;
 import com.rogrand.demo.ui.home.register.RegisterActivity;
+import com.rogrand.demo.ui.home.webview.WebViewActivity;
 import com.rogrand.demo.ui.my.setting.SettingActivity;
 import com.rogrand.demo.ui.my.userinfo.UserInfoActivity;
+
+import org.jetbrains.annotations.NotNull;
 
 import dagger.Component;
 
@@ -27,4 +30,6 @@ public interface ActivityComponent {
     void inject(SettingActivity settingActivity);
 
     void inject(UserInfoActivity userInfoActivity);
+
+    void inject(@NotNull WebViewActivity webViewActivity);
 }

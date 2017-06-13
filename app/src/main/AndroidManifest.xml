@@ -21,16 +21,17 @@
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <!-- 登录 -->
         <activity android:name=".ui.home.login.LoginActivity" />
-        <!--注册-->
+        <!-- 注册 -->
         <activity android:name=".ui.home.register.RegisterActivity" />
-        <!--图片选择后的显示界面-->
+        <!-- 图片选择后的显示界面 -->
         <activity android:name=".ui.home.imageselector.ImageResultActivity" />
-        <!--解决Android6.0+拍照问题-->
+        <!-- 解决Android6.0+拍照问题 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -40,20 +41,22 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-        <!--设置-->
+        <!-- 设置 -->
         <activity android:name=".ui.my.setting.SettingActivity" />
-        <!--关于-->
+        <!-- 关于 -->
         <activity android:name=".ui.my.setting.about.AboutActivity" />
-        <!--个人信息-->
+        <!-- 个人信息 -->
         <activity android:name=".ui.my.userinfo.UserInfoActivity" />
-        <!--按钮-->
+        <!-- 按钮 -->
         <activity android:name=".ui.tool.button.ButtonActivity" />
-        <!--Toast-->
+        <!-- Toast -->
         <activity android:name=".ui.tool.toast.ToastActivity" />
-        <!--Banner-->
+        <!-- Banner -->
         <activity android:name=".ui.tool.banner.BannerActivity" />
-        <!--Dialog-->
+        <!-- Dialog -->
         <activity android:name=".ui.tool.dialog.DialogActivity" />
+        <!-- WebView -->
+        <activity android:name=".ui.home.webview.WebViewActivity" />
     </application>
 
 </manifest>
