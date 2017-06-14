@@ -58,7 +58,7 @@ public class ToolTabFragment extends SimpleFragment {
     }
 
     private void initAdapter() {
-        BaseQuickAdapter toolAdapter = new ToolAdapter(R.layout.item_tool, mDataList);
+        BaseQuickAdapter toolAdapter = new ToolAdapter(R.layout.item_grid_tool, mDataList);
         toolAdapter.openLoadAnimation();
         View top = mActivity.getLayoutInflater().inflate(R.layout.view_tool_top, (ViewGroup) mRecyclerView.getParent(), false);
         toolAdapter.addHeaderView(top);

@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="banner_url">
-        <item>http://img.ithome.com/newsuploadfiles/2017/5/20170524090003_9584.jpg</item>
-        <item>http://img.ithome.com/newsuploadfiles/2017/5/20170526_150102_504.jpg@s_2,w_600,h_450
+        <item>http://img.iplaysoft.com/wp-content/uploads/2017/news/3410/surface_laptop.jpg</item>
+        <item>http://img.iplaysoft.com/wp-content/uploads/2016/windows10/windows10_2x.jpg</item>
+        <item>
+            http://img.iplaysoft.com/wp-content/uploads/2017/google-translate/google_translate_2x.jpg
         </item>
-        <item>http://img.ithome.com/newsuploadfiles/2017/5/20170526_150757_732.jpg</item>
-        <item>http://img.ithome.com/newsuploadfiles/2017/5/20170523_202616_760.png</item>
-        <item>http://img.ithome.com/newsuploadfiles/2017/5/20170526_181450_974.jpg</item>
+        <item>
+            http://img.iplaysoft.com/wp-content/uploads/2017/weibo-international/webo_international_2x.jpg
+        </item>
+        <item>http://img.iplaysoft.com/wp-content/uploads/2015/p/2836/minecraft_2x.jpg</item>
     </array>
     <array name="banner_title">
-        <item>华为MateBook X真机图赏</item>
-        <item>华为nova 2系列新品正式发布</item>
-        <item>微软Surface Pro 4推送Win10新固件更新</item>
-        <item>全新微软Surface Pro 2017发布</item>
-        <item>三星Galaxy S8/S8+正式开售</item>
+        <item>微软新款笔记本 Surface Laptop 发布</item>
+        <item>Win10 创意者更新正式版</item>
+        <item>Google 翻译手机 APP 新版</item>
+        <item>微博国际版 - 官方去广告版客户端</item>
+        <item>我的世界：故事模式</item>
     </array>
     <array name="banner_anim">
         <item>Default</item>

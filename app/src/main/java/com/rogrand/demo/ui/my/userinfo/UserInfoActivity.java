@@ -1,6 +1,8 @@
 package com.rogrand.demo.ui.my.userinfo;
 
+import android.content.Intent;
 import android.support.v7.widget.Toolbar;
+import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.luck.picture.lib.compress.Luban;
@@ -10,9 +12,9 @@ import com.luck.picture.lib.model.PictureConfig;
 import com.rogrand.atom.widget.CircleImageView;
 import com.rogrand.demo.R;
 import com.rogrand.demo.base.BaseActivity;
+import com.rogrand.demo.ui.my.userinfo.mycity.MyCityActivity;
 import com.yalantis.ucrop.entity.LocalMedia;
 
-import java.io.File;
 import java.util.List;
 
 import butterknife.BindView;
@@ -24,6 +26,8 @@ public class UserInfoActivity extends BaseActivity<UserInfoPresenter> implements
     Toolbar mToolbar;
     @BindView(R.id.user_img)
     CircleImageView userHeader;
+    @BindView(R.id.llyt_user_city)
+    LinearLayout mLlytUserCity;
 
     @Override
     protected void initInject() {
@@ -68,6 +72,12 @@ public class UserInfoActivity extends BaseActivity<UserInfoPresenter> implements
                 .setCompressW(100)//要锁宽
                 .create();
         PictureConfig.getInstance().init(options).openPhoto(UserInfoActivity.this, resultCallback);
+    }
+
+    @OnClick(R.id.llyt_user_city)
+    public void toMyCity() {
+        Intent intent = new Intent(mContext, MyCityActivity.class);
+        startActivity(intent);
     }
 
     //图片选择回调方法

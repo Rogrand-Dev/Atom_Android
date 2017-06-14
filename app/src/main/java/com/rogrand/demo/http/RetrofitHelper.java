@@ -3,6 +3,7 @@ package com.rogrand.demo.http;
 import com.rogrand.atom.utils.SignUtils;
 import com.rogrand.demo.app.Constants;
 import com.rogrand.demo.bean.LoginBean;
+import com.rogrand.demo.bean.MovieListBean;
 import com.rogrand.demo.http.api.ApiResponse;
 import com.rogrand.demo.http.api.ApiService;
 
@@ -38,8 +39,13 @@ public class RetrofitHelper implements HttpHelper {
         params.put("client_secret", UrlConstants.TOKEN_CLIENT_SECRET);
         params.put("grant_type", "password");
         params.put("scope", "read");*/
-        params.put("sign", SignUtils.getInstance().sign(params, Constants.ENCRYPT_SECRET,"MD5"));
+        params.put("sign", SignUtils.getInstance().sign(params, Constants.ENCRYPT_SECRET, "MD5"));
 
         return mApiService.login(params);
+    }
+
+    @Override
+    public Flowable<ApiResponse<MovieListBean>> getMovieList() {
+        return mApiService.getMovieList();
     }
 }

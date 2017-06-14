@@ -26,7 +26,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
             loadRootFragment(R.id.fl_container, MainFragment.newInstance());
         }
 
-        // 可以监听该Activity下的所有Fragment的18个 生命周期方法
+        // 可以监听该Activity下的所有Fragment的18个生命周期方法
         registerFragmentLifecycleCallbacks(new FragmentLifecycleCallbacks() {
 
             @Override

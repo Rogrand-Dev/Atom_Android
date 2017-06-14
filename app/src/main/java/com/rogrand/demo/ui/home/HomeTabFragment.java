@@ -12,8 +12,9 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.rogrand.demo.R;
 import com.rogrand.demo.base.SimpleFragment;
 import com.rogrand.demo.event.TabSelectedEvent;
-import com.rogrand.demo.ui.home.imageselector.ImageResultActivity;
+import com.rogrand.demo.ui.home.imageselector.PictureSelectorActivity;
 import com.rogrand.demo.ui.home.login.LoginActivity;
+import com.rogrand.demo.ui.home.recycler.RecyclerViewActivity;
 import com.rogrand.demo.ui.home.webview.WebViewActivity;
 
 import org.greenrobot.eventbus.EventBus;
@@ -30,7 +31,7 @@ public class HomeTabFragment extends SimpleFragment {
     @BindView(R.id.rv_list)
     RecyclerView mRecyclerView;
 
-    private static final Class<?>[] ACTIVITY = {LoginActivity.class, ImageResultActivity.class, LoginActivity.class, LoginActivity.class, WebViewActivity.class};
+    private static final Class<?>[] ACTIVITY = {LoginActivity.class, PictureSelectorActivity.class, RecyclerViewActivity.class, LoginActivity.class, WebViewActivity.class};
     private static final String[] TITLE = {"登录注册", "图片选择", "RecyclerView加载", "多状态UI", "WebView交互"};
     private static final int[] IMG = {R.drawable.gv_animation, R.drawable.gv_multipleltem, R.drawable.gv_header_and_footer, R.drawable.gv_pulltorefresh, R.drawable.gv_section, R.drawable.gv_empty, R.drawable.gv_drag_and_swipe, R.drawable.gv_item_click, R.drawable.gv_expandable, R.drawable.gv_databinding,};
     private ArrayList<HomeItem> mDataList;
@@ -57,7 +58,7 @@ public class HomeTabFragment extends SimpleFragment {
     }
 
     private void initAdapter() {
-        BaseQuickAdapter homeAdapter = new HomeAdapter(R.layout.item_home, mDataList);
+        BaseQuickAdapter homeAdapter = new HomeAdapter(R.layout.item_grid_home, mDataList);
         homeAdapter.openLoadAnimation();
         View top = mActivity.getLayoutInflater().inflate(R.layout.view_home_top, (ViewGroup) mRecyclerView.getParent(), false);
         homeAdapter.addHeaderView(top);

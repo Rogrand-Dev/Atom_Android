@@ -98,6 +98,7 @@
     <string name="socialNetworks">Social Networks</string>
     <string name="md_choose_label">选择</string>
     <string name="clear_selection">取消</string>
+    <string name="rationale_location_contacts">Atom请求获取此设备的位置信息</string>
     <string name="url_rogrand">http://www.rogrand.com</string>
 
 </resources>

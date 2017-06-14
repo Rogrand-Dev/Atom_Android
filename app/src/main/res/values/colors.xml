@@ -31,4 +31,5 @@
     <color name="passport_code_disable">#ffb6b6b6</color>
     <color name="passport_code_tip_back">#fff7f7f7</color>
     <color name="passport_code_border">#ffcacaca</color>
+    <color name="hex_1a000000">#1a000000</color>
 </resources>

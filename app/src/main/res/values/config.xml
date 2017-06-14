@@ -6,7 +6,7 @@
     <!-- 接口url -->
     <!-- 测试环境：http://oatest.rogrand.com:9527/ -->
     <!-- 正式环境： -->
-    <string name="api_host">http://oatest.rogrand.com:9527/</string>
+    <string name="api_host">http://result.eolinker.com/</string>
     <!-- 接口前缀 -->
     <string name="api_name_prefix"></string> <!--api/-->
     <!-- 接口版本 -->

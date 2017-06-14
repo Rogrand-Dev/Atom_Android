@@ -143,4 +143,11 @@
         <item name="android:layout_marginBottom">@dimen/headerMarginVertical</item>
     </style>
 
+    <style name="trailer_play_icon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_trailer_play_small</item>
+    </style>
+
 </resources>

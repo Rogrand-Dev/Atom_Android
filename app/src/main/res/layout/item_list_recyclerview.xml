@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:id="@+id/fl_trailer_play"
+            android:layout_width="64dp"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_poster_10precent_black_transparent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_trailer_play"
+                style="@style/trailer_play_icon" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/fl_trailer_play"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="加勒比海盗5：死无对证"
+                    android:textColor="@color/hex_222222"
+                    android:textSize="@dimen/text_h16" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_title"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@+id/fl_trailer_play"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/hex_666666"
+            android:textSize="@dimen/text_h13" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_title"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/fl_trailer_play"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="亡灵要复仇，船长好发愁"
+            android:textColor="@color/hex_666666"
+            android:textSize="@dimen/text_h13" />
+
+        <com.rogrand.atom.widget.ButtonStyle
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/comment"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="购票"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_h12"
+            app:normal_color="#F1F1F1"
+            app:press_color="#E9EEF2"
+            app:stroke_color="@color/colorPrimary"
+            app:stroke_width="1dp" />
+
+        <LinearLayout
+            android:id="@+id/showlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comment"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/action"
+            android:layout_toRightOf="@+id/fl_trailer_play">
+
+            <TextView
+                android:id="@+id/showings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxWidth="180dp"
+                android:singleLine="true"
+                android:text="今天101家影院放映1840场"
+                android:textColor="@color/hex_666666"
+                android:textSize="@dimen/text_h13" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/line_one_px_relative"
+        layout="@layout/line_one_px"
+        android:layout_width="match_parent"
+        android:layout_height="1.0px" />
+</LinearLayout>

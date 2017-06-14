@@ -1,6 +1,7 @@
 package com.rogrand.demo.component;
 
 import com.rogrand.demo.bean.LoginBean;
+import com.rogrand.demo.bean.MovieListBean;
 import com.rogrand.demo.http.HttpHelper;
 import com.rogrand.demo.http.api.ApiResponse;
 import com.rogrand.demo.prefs.PreferencesHelper;
@@ -40,6 +41,11 @@ public class DataManager implements HttpHelper, PreferencesHelper {
     @Override
     public Flowable<ApiResponse<LoginBean>> login(String userName, String verificationCode) {
         return mHttpHelper.login(userName, verificationCode);
+    }
+
+    @Override
+    public Flowable<ApiResponse<MovieListBean>> getMovieList() {
+        return mHttpHelper.getMovieList();
     }
 
 }
